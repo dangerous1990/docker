@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  ldap:
+    image: osixia/openldap:1.2.4
+    environment:
+      LDAP_ORGANISATION: test
+      LDAP_DOMAIN: example.org
+      # login with cn=admin,dc=example,dc=org
+      LDAP_ADMIN_PASSWORD: admin
+      LDAP_CONFIG_PASSWORD: config
+  ldapadmin:
+    image: osixia/phpldapadmin:0.7.2
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: ldap
+    ports:
+      - "6443:443"
+    depends_on:
+      - ldap
