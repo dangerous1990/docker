@@ -1,0 +1,42 @@
+{
+  "PipelineFinisherExecutor_01" : {
+    "description" : "",
+    "label" : "Pipeline Finisher Executor 1",
+    "xPos" : 501.77777099609375,
+    "yPos" : 413.88885498046875,
+    "stageType" : "EXECUTOR"
+  },
+  "JDBCProducer_01" : {
+    "description" : "",
+    "label" : "clickhouse",
+    "xPos" : 713.2921142578125,
+    "yPos" : 172.38258361816406,
+    "stageType" : "TARGET"
+  },
+  "JDBCQueryConsumer_01" : {
+    "description" : "",
+    "label" : "mysql",
+    "xPos" : 191.16151428222656,
+    "yPos" : 301.38832092285156,
+    "stageType" : "SOURCE"
+  },
+  ":pipeline:" : {
+    "previewConfig" : {
+      "previewSource" : "CONFIGURED_SOURCE",
+      "batchSize" : 10,
+      "timeout" : 30000,
+      "writeToDestinations" : false,
+      "executeLifecycleEvents" : false,
+      "showHeader" : false,
+      "showFieldType" : true,
+      "rememberMe" : false
+    }
+  },
+  "FieldMapper_01" : {
+    "description" : "",
+    "label" : "Field Mapper 1",
+    "xPos" : 473.3631286621094,
+    "yPos" : 184.66207885742188,
+    "stageType" : "PROCESSOR"
+  }
+}

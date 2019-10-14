@@ -1,0 +1,18 @@
+{
+  "pipelineId" : "test11a5ac0f33-9ecd-45d3-9378-d2669fd3ac05",
+  "title" : "test (1) (1)",
+  "description" : "",
+  "created" : 1570873991035,
+  "lastModified" : 1570874063625,
+  "creator" : "admin",
+  "lastModifier" : "admin",
+  "lastRev" : "0",
+  "uuid" : "2916968e-d0b2-4781-a2fe-1017dcd8457b",
+  "valid" : true,
+  "metadata" : {
+    "labels" : [ ]
+  },
+  "name" : "test11a5ac0f33-9ecd-45d3-9378-d2669fd3ac05",
+  "sdcVersion" : "3.9.1",
+  "sdcId" : "f5f601d1-ecd5-11e9-a4f9-513d3c9312b1"
+}

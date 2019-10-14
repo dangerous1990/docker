@@ -1,0 +1,10 @@
+version: '2.1'
+services:
+    streamset:
+        image: yzh/datacollector:3.9.1 
+        ports:
+            - 18630:18630
+        volumes:
+            - ./data:/data
+            - ./lib:/opt/streamsets-datacollector-3.9.1/streamsets-libs-extras/streamsets-datacollector-jdbc-lib/lib/
+            
