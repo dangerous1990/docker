@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+    metabase:
+        image: yzh/metabase-with-clickhouse:v0.35.0 
+        volumes:
+            - ./metabase-data:/metabase-data
+        environment:
+            #  MB_DB_CONNECTION_URI: "mysql://mysql:3306/metabase?user=root&password=root"
+            MB_DB_TYPE: "mysql"
+            MB_DB_DBNAME: "metabase"
+            MB_DB_PORT: "3306"
+            MB_DB_USER: "root"
+            MB_DB_PASS: "root"
+            MB_DB_HOST: "mysql"
+        ports:
+            - "3000:3000"
+    mysql:
+        image: mysql:5.7
+        volumes:
+            - ./mysql-data:/var/lib/mysql
+        environment:
+           MYSQL_ROOT_PASSWORD: root
+           MYSQL_DATABASE: metabase
+        ports:
+            - "3306:3306"
+        command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']

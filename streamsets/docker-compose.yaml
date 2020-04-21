@@ -1,10 +1,11 @@
 version: '2.1'
 services:
     streamset:
-        image: yzh/datacollector:3.9.1 
+        image: yzh/datacollector-j-p-g:0.0.0 
         ports:
             - 18630:18630
         volumes:
             - ./data:/data
+            - /Users/limeng/code/jieba:/jieba
             - ./lib:/opt/streamsets-datacollector-3.9.1/streamsets-libs-extras/streamsets-datacollector-jdbc-lib/lib/
             
