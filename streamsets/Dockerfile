@@ -1,4 +1,4 @@
-ARG SDC_VERSION=3.9.1
+ARG SDC_VERSION=3.15.0
 FROM streamsets/datacollector:${SDC_VERSION}
 
 ARG SDC_LIBS

@@ -1,11 +1,15 @@
 version: '2.1'
 services:
     streamset:
-        image: yzh/datacollector-j-p-g:0.0.0 
+        image: yzh/datacollector:3.15.0 
         ports:
             - 18630:18630
         volumes:
             - ./data:/data
-            - /Users/limeng/code/jieba:/jieba
-            - ./lib:/opt/streamsets-datacollector-3.9.1/streamsets-libs-extras/streamsets-datacollector-jdbc-lib/lib/
+            - ./jdbclib:/opt/streamsets-datacollector-3.9.1/streamsets-libs-extras/streamsets-datacollector-jdbc-lib/lib/
+            - ./groovylib:/opt/streamsets-datacollector-3.9.1/streamsets-libs-extras/streamsets-datacollector-groovy_2_4-lib/lib/
+            - ./conf/sdc.properties:/etc/sdc/sdc.properties
+            - ./conf/ldap-login.conf:/etc/sdc/ldap-login.conf
+            - ./conf/ldap-bind-password.txt:/etc/sdc/ldap-bind-password.txt
+            - ./conf/db.properties:/etc/sdc/db.properties
             
