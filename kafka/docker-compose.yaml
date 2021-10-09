@@ -1,0 +1,14 @@
+version: '3'
+services:
+  kafka:
+    image: spotify/kafka 
+    ports:
+      - 2181:2181
+      - 9092:9092
+    environment:
+      ADVERTISED_HOST: kafka
+      ADVERTISED_PORT: 9092
+      CONSUMER_THREADS: 1
+      TOPICS: my-topic
+      ZK_CONNECT: kafka:2181/root/path
+      GROUP_ID: mymirror
