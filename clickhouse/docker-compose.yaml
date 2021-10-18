@@ -1,7 +1,7 @@
 version: '2.1'
 services:
     clickhouse:
-        image: yandex/clickhouse-server:latest
+        image: yandex/clickhouse-server:21.8.8.29 
         ulimits:
           nofile:
             soft: 262144
